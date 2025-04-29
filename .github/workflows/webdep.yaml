@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: [self-hosted, Windows, X64]  # Uses your local laptop
+    runs-on: self-hosted  # Uses your local laptop
     
     steps:
     - name: Checkout repository
