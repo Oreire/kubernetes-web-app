@@ -1,0 +1,31 @@
+name: Deploy Web App to Kubernetes (Local Runner)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: [self-hosted, Windows, X64]  # Uses your local laptop
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Build custom Nginx image
+      run: |
+        docker build -t my-nginx-app .
+        docker tag my-nginx-app localhost:5000/my-nginx-app
+        docker push localhost:5000/my-nginx-app  # Using local registry
+
+    - name: Apply Kubernetes manifests
+      run: |
+        cd appdep
+        kubectl apply -f deploymentt.yaml
+        kubectl apply -f nginx-svc.yaml
+
+    - name: Verify Deployment
+      run: |
+        kubectl get pods -o wide
+        kubectl get svc
