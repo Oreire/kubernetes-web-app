@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        repository: https://github.com/Oreire/kubernetes-web-app.git # Ensure the correct repository is referenced
+        ref: main # Specify the branch to check out
 
     - name: Build custom Nginx image
       run: |
