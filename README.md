@@ -1,6 +1,6 @@
 ## Deploying A Web Application on a Local Kubernetes Cluster
 
-Organizations seek **efficient and cost-effective solutions** for deploying and managing their web applications.Leveraging **containerized applications** within a **Kubernetes environment** offers a practical and scalable approach to achieving this goal. In this project, **custom-made containers** are deployed on a **three-node Kubernetes cluster** running on **Docker Desktop**, specifically designed for **local development and testing**. This setup allows the simulation of production-like environments, streamline application management, and ensure **seamless testing** before deploying to **multi-node** or **cloud-based Kubernetes clusters**.
+Organizations seek **efficient and cost-effective solutions** for deploying and managing their web applications.Leveraging **containerized applications** within a **Kubernetes environment** offers a practical and scalable approach to achieving this goal. In this project, **custom-made containers** are deployed on a **three-node Kubernetes cluster** running on **Docker Desktop**, specifically designed for **local development and testing**. This setup allows the simulation of production-like environments by Developers to streamline application management, and ensure **seamless testing** before deploying to **multi-node** or **cloud-based Kubernetes clusters**.
 
 # The following steps are undertaken to implement this project:
 
