@@ -72,5 +72,5 @@ This is achievable by making this web application accessible over the public int
 
 # Next-Steps:
 
-    #  Automation of Web Application Deployment Using Multi-node Kubernetes Cluster for Enhanced 
-       High Avaialabiliy, Scalability and Fault Tolerance.
+    #  Automation of Web Application Deployment Using Multi-node Kubernetes Cluster for High Avaialabiliy,   
+       Scalability and Fault Tolerance.
