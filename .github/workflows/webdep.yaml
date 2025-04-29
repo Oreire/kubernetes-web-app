@@ -15,11 +15,11 @@ jobs:
       with:
         ref: main  # Specify the branch to check out
 
-    - name: Build custom Nginx image
-      run: |
-        docker build -t my-nginx-app .
-        docker tag my-nginx-app localhost:5000/my-nginx-app
-        docker push localhost:5000/my-nginx-app  # Using local registry
+    #- name: Build custom Nginx image
+     # run: |
+      #  docker build -t my-nginx-app .
+       # docker tag my-nginx-app localhost:5000/my-nginx-app
+        #docker push localhost:5000/my-nginx-app  # Using local registry
 
     - name: Apply Kubernetes manifests
       run: |
