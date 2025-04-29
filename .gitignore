@@ -15,16 +15,4 @@ spec:
     metadata:
       labels:
         app: nginx-web
-    spec:
-      containers:
-      - name: nginx
-        image: docker.io/library/my-nginx-app:latest
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
+    
