@@ -13,8 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        repository: https://github.com/Oreire/kubernetes-web-app.git # Ensure the correct repository is referenced
-        ref: main # Specify the branch to check out
+        ref: main  # Specify the branch to check out
 
     - name: Build custom Nginx image
       run: |
@@ -25,10 +24,11 @@ jobs:
     - name: Apply Kubernetes manifests
       run: |
         cd appdep
-        kubectl apply -f deploymentt.yaml
+        kubectl apply -f deployment.yaml
         kubectl apply -f nginx-svc.yaml
 
     - name: Verify Deployment
       run: |
         kubectl get pods -o wide
-        kubectl get svc
+        kubectl get svc -o wide
+        kubectl describe deployment nginx-web
